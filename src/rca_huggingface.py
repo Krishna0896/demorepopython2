@@ -14,8 +14,8 @@ from getpass import getpass
 
 #hfapi_key = getpass("Enter you HuggingFace access token:")
 hfapi_key="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"
-os.environ["HF_TOKEN"] = hfapi_key
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = hfapi_key
+os.environ["HF_TOKEN"] = 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
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = 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
 
 # importing HuggingFace model abstraction class from langchain
 from langchain_huggingface import HuggingFaceEndpoint
