@@ -86,8 +86,10 @@ encode_kwargs = {
 
 embedding = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
-    model_kwargs=model_kwargs,
-    encode_kwargs=encode_kwargs
+    model_kwargs={
+        "device": "cpu",
+        "token": "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"
+    }
 )
 
 embedding
