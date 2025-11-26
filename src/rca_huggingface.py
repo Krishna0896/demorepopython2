@@ -83,7 +83,7 @@ model_kwargs = {'device': device}      # cuda/cpu
 encode_kwargs = {'normalize_embeddings': False}
 
 embedding =  HuggingFaceEmbeddings(
-    model_name=modelPath,     # Provide the pre-trained model's path
+    model_name="sentence-transformers/all-MiniLM-L6-v2",     # Provide the pre-trained model's path
     model_kwargs=model_kwargs, # Pass the model configuration options
     encode_kwargs=encode_kwargs # Pass the encoding options
 )
