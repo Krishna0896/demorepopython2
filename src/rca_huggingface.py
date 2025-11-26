@@ -76,16 +76,18 @@ from langchain_huggingface import HuggingFaceEmbeddings
 modelPath ="mixedbread-ai/mxbai-embed-large-v1"                  # Model card: https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1
                                                                  # Find other Emb. models at: https://huggingface.co/spaces/mteb/leaderboard
 
-# Create a dictionary with model configuration options, specifying to use the CPU for computations
-model_kwargs = {'device': device}      # cuda/cpu
+model_kwargs = {
+    "device": "cpu"    # or "cuda" if using GPU
+}
 
-# Create a dictionary with encoding options, specifically setting 'normalize_embeddings' to False
-encode_kwargs = {'normalize_embeddings': False}
+encode_kwargs = {
+    "normalize_embeddings": True
+}
 
-embedding =  HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2",     # Provide the pre-trained model's path
-    model_kwargs=model_kwargs, # Pass the model configuration options
-    encode_kwargs=encode_kwargs # Pass the encoding options
+embedding = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    model_kwargs=model_kwargs,
+    encode_kwargs=encode_kwargs
 )
 
 embedding
