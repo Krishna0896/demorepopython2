@@ -13,9 +13,9 @@ import os
 from getpass import getpass
 
 #hfapi_key = getpass("Enter you HuggingFace access token:")
-hfapi_key="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"
-os.environ["HF_TOKEN"] = "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"
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+hfapi_key="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"
+os.environ["HF_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 # importing HuggingFace model abstraction class from langchain
 from langchain_huggingface import HuggingFaceEndpoint
@@ -88,7 +88,7 @@ embedding = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
     model_kwargs={
         "device": "cpu",
-        "token": "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"
+        "token": "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"
     }
 )
 
